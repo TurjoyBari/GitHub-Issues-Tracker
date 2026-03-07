@@ -51,6 +51,68 @@ const loadIssues = () => {
       priorityBadge = `<div class="badge badge-outline badge-info">Info</div>`;
     }
 
+
+
+
+
+    function getLabelBadge(label) {
+        
+     if (!label) {
+       return ""; 
+     }
+    
+     if (label === "bug") {
+       return `
+       <div class="badge badge-soft badge-error uppercase">
+           <img src="./assets/Vector.png" alt="">
+           bug
+       </div>
+       `;
+     }
+    
+     if (label === "help wanted") {
+       return `
+       <div class="badge badge-soft badge-warning uppercase">
+           <img src="./assets/Lifebuoy.png" alt="">
+           help wanted
+       </div>
+       `;
+     }
+    
+     if (label === "enhancement") {
+       return `
+       <div class="badge badge-soft badge-success uppercase">
+           <img src="./assets/Lifebuoy.png" alt="">
+           enhancement
+       </div>
+       `;
+     }
+    
+     if (label === "documentation") {
+       return `
+       <div class="badge badge-soft badge-success uppercase">
+           <img src="./assets/Lifebuoy.png" alt="">
+           documentation
+       </div>
+       `;
+     }
+    
+     if (label === "good first issue") {
+       return `
+       <div class="badge badge-soft badge-success uppercase">
+           <img src="./assets/Lifebuoy.png" alt="">
+           good first issue
+       </div>
+       `;
+     }
+    
+     return "";
+
+}
+
+
+
+
       btnDiv.innerHTML = `
 
                 <div class="card p-4 h-full bg-base-100 w-full shadow-sm">
@@ -63,13 +125,9 @@ const loadIssues = () => {
                             <h2 class="text-[18px] font-bold text-[#000000] p-[8px]">${issue.title}</h2>
                             <p class="text-[12px] text-[#64748B] line-clamp-2">${issue.description}</p>
                             
-                            <div class="card-actions pt-[12px] flex justify-between">
-                                <div class="badge badge-soft badge-error uppercase"><img src="./assets/Vector.png" alt="">
-                                       bug
-                                </div>
-                                <div class="badge badge-soft badge-warning uppercase"><img src="./assets/Lifebuoy.png" alt="">
-                                    bug
-                                </div>
+                            <div class="card-actions pt-[12px] flex gap-2 flex-wrap">
+                               ${getLabelBadge(issue.labels[0])}
+                               ${getLabelBadge(issue.labels[1])}
                             </div>
                         </div>
                     </div>
