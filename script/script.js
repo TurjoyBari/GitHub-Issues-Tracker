@@ -428,4 +428,23 @@ function filterIssues(status) {
   displayIssues(filtered);
 }
 
+
+async function searchIssues() {
+
+  const searchText = document.getElementById("searchInput").value.trim();
+
+  if(searchText === ""){
+    displayIssues(allIssues);
+    return;
+  }
+
+  const url = `https://phi-lab-server.vercel.app/api/v1/lab/issues/search?q=${searchText}`;
+
+  const res = await fetch(url);
+  const data = await res.json();
+
+  displayIssues(data.data);
+
+}
+
 loadIssues();
