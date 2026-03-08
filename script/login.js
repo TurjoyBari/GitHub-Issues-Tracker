@@ -10,7 +10,7 @@ document.getElementById("login-btn").addEventListener("click", function () {
   if (contactNumber == "admin" && pin == "admin123") {
     // alert("login Success");
 
-    window.location.assign("/home.html");
+    window.location.assign("home.html");
   } else {
     // alert("login Failed");
     return;
