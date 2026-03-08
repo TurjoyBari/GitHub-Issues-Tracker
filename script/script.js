@@ -3,6 +3,17 @@ let allIssues = [];
 const allToggleBtn = document.getElementById("all-toggle-btn");
 const openToggleBtn = document.getElementById("open-toggle-btn");
 const closedToggleBtn = document.getElementById("closed-toggle-btn");
+const loadingSpinner = document.getElementById("loadingSpinner")
+const cardContainer = document.getElementById("cardContainer");
+
+
+function showLoading(){
+    loadingSpinner.classList.remove("hidden")
+    cardContainer.innerHTML= ""
+}
+function hideLoading(){
+    loadingSpinner.classList.add("hidden")
+}
 
 function toggleStyle(id) {
   allToggleBtn.classList.remove("bg-[#4A00FF]", "text-white");
@@ -148,10 +159,12 @@ const displayCardDetail = (issue) => {
 };
 
 const loadIssues = () => {
+    showLoading()
   fetch("https://phi-lab-server.vercel.app/api/v1/lab/issues")
     .then((response) => response.json())
     .then((data) => {
       allIssues = data.data;
+      hideLoading()
       displayIssues(allIssues);
     });
 
@@ -423,8 +436,9 @@ function displayIssues(issues) {
 }
 
 function filterIssues(status) {
+    showLoading()
   const filtered = allIssues.filter((issue) => issue.status === status);
-
+    hideLoading()
   displayIssues(filtered);
 }
 
