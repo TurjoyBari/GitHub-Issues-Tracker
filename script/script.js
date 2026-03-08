@@ -36,34 +36,34 @@ const displayCardDetail = (issue) => {
     }
     if (label === "open") {
       return `
-       <div class="badge badge-success text-[12px] text-white rounded-full">Opened</div>
+       <div class="badge badge-success text-[12px] text-white rounded-full font-semibold">Opened</div>
        `;
     }
     if (label === "closed") {
       return `
-       <div class="badge badge-error text-[12px] text-white rounded-full">closed</div>
+       <div class="badge badge-error text-[12px] text-white rounded-full font-semibold">Closed</div>
        `;
     }
 
     if (label === "high") {
       return `
-       <div class="badge badge-error text-[12px] text-white rounded-full uppercase">High</div>
+       <div class="badge badge-error text-[12px] text-white rounded-full uppercase font-semibold">High</div>
        `;
     }
     if (label === "medium") {
       return `
-       <div class="badge badge-warning text-[12px] text-white rounded-full uppercase">medium</div>
+       <div class="badge badge-warning text-[12px] text-white rounded-full uppercase font-semibold">medium</div>
        `;
     }
     if (label === "low") {
       return `
-       <div class="badge badge-neutral text-[12px] bg-gray-300 border-none text-black rounded-full uppercase">low</div>
+       <div class="badge badge-neutral text-[12px] bg-gray-300 border-none text-black rounded-full uppercase font-semibold">low</div>
        `;
     }
 
     if (label === "bug") {
       return `
-       <div class="badge badge-soft badge-error uppercase">
+       <div class="badge badge-soft badge-error uppercase font-semibold">
            <img src="./assets/Vector.png" alt="">
            bug
        </div>
@@ -72,7 +72,7 @@ const displayCardDetail = (issue) => {
 
     if (label === "help wanted") {
       return `
-       <div class="badge badge-soft badge-warning uppercase">
+       <div class="badge badge-soft badge-warning uppercase  font-semibold">
            <img src="./assets/Lifebuoy.png" alt="">
            help wanted
        </div>
@@ -81,8 +81,8 @@ const displayCardDetail = (issue) => {
 
     if (label === "enhancement") {
       return `
-       <div class="badge badge-soft badge-success uppercase">
-           <img src="./assets/Lifebuoy.png" alt="">
+       <div class="badge badge-soft badge-success uppercase font-semibold">
+           <img src="./assets/enhancement.png" alt="">
            enhancement
        </div>
        `;
@@ -90,8 +90,8 @@ const displayCardDetail = (issue) => {
 
     if (label === "documentation") {
       return `
-       <div class="badge badge-soft badge-success uppercase">
-           <img src="./assets/Lifebuoy.png" alt="">
+       <div class="badge badge-soft badge-info uppercase  font-semibold">
+           <i class="fa-solid fa-file-lines"></i>
            documentation
        </div>
        `;
@@ -99,8 +99,8 @@ const displayCardDetail = (issue) => {
 
     if (label === "good first issue") {
       return `
-       <div class="badge badge-soft badge-success uppercase">
-           <img src="./assets/Lifebuoy.png" alt="">
+       <div class="badge badge-soft badge-primary uppercase  font-semibold">
+           <i class="fa-solid fa-circle-exclamation"></i>
            good first issue
        </div>
        `;
@@ -183,7 +183,7 @@ const loadIssues = () => {
 
         if (label === "bug") {
           return `
-       <div class="badge badge-soft badge-error uppercase">
+       <div class="badge badge-soft badge-error uppercase font-semibold">
            <img src="./assets/Vector.png" alt="">
            bug
        </div>
@@ -192,7 +192,7 @@ const loadIssues = () => {
 
         if (label === "help wanted") {
           return `
-       <div class="badge badge-soft badge-warning uppercase">
+       <div class="badge badge-soft badge-warning uppercase font-semibold">
            <img src="./assets/Lifebuoy.png" alt="">
            help wanted
        </div>
@@ -201,8 +201,8 @@ const loadIssues = () => {
 
         if (label === "enhancement") {
           return `
-       <div class="badge badge-soft badge-success uppercase">
-           <img src="./assets/Lifebuoy.png" alt="">
+       <div class="badge badge-soft badge-success uppercase font-semibold">
+           <img src="./assets/enhancement.png" alt="">
            enhancement
        </div>
        `;
@@ -210,8 +210,8 @@ const loadIssues = () => {
 
         if (label === "documentation") {
           return `
-       <div class="badge badge-soft badge-success uppercase">
-           <img src="./assets/Lifebuoy.png" alt="">
+       <div class="badge badge-soft badge-info uppercase font-semibold">
+           <i class="fa-solid fa-file-lines"></i>
            documentation
        </div>
        `;
@@ -219,8 +219,8 @@ const loadIssues = () => {
 
         if (label === "good first issue") {
           return `
-       <div class="badge badge-soft badge-success uppercase">
-           <img src="./assets/Lifebuoy.png" alt="">
+       <div class="badge badge-soft badge-primary uppercase font-semibold">
+           <i class="fa-solid fa-circle-exclamation"></i>
            good first issue
        </div>
        `;
@@ -326,7 +326,7 @@ function displayIssues(issues) {
 
       if (label === "bug") {
         return `
-       <div class="badge badge-soft badge-error uppercase">
+       <div class="badge badge-soft badge-error uppercase font-semibold">
            <img src="./assets/Vector.png" alt="">
            bug
        </div>
@@ -335,7 +335,7 @@ function displayIssues(issues) {
 
       if (label === "help wanted") {
         return `
-       <div class="badge badge-soft badge-warning uppercase">
+       <div class="badge badge-soft badge-warning uppercase font-semibold">
            <img src="./assets/Lifebuoy.png" alt="">
            help wanted
        </div>
@@ -344,8 +344,8 @@ function displayIssues(issues) {
 
       if (label === "enhancement") {
         return `
-       <div class="badge badge-soft badge-success uppercase">
-           <img src="./assets/Lifebuoy.png" alt="">
+       <div class="badge badge-soft badge-success uppercase font-semibold">
+           <img src="./assets/enhancement.png" alt="">
            enhancement
        </div>
        `;
@@ -353,8 +353,8 @@ function displayIssues(issues) {
 
       if (label === "documentation") {
         return `
-       <div class="badge badge-soft badge-success uppercase">
-           <img src="./assets/Lifebuoy.png" alt="">
+       <div class="badge badge-soft badge-info uppercase font-semibold">
+           <i class="fa-solid fa-file-lines"></i>
            documentation
        </div>
        `;
@@ -362,8 +362,8 @@ function displayIssues(issues) {
 
       if (label === "good first issue") {
         return `
-       <div class="badge badge-soft badge-success uppercase">
-           <img src="./assets/Lifebuoy.png" alt="">
+       <div class="badge badge-soft badge-primary uppercase font-semibold">
+           <i class="fa-solid fa-circle-exclamation"></i>
            good first issue
        </div>
        `;
