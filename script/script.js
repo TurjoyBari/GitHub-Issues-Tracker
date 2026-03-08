@@ -57,7 +57,7 @@ const displayCardDetail = (issue) => {
     }
     if (label === "low") {
       return `
-       <div class="badge badge-neutral text-[12px] text-white rounded-full uppercase">low</div>
+       <div class="badge badge-neutral text-[12px] bg-gray-300 border-none text-black rounded-full uppercase">low</div>
        `;
     }
 
@@ -169,11 +169,11 @@ const loadIssues = () => {
       let priorityBadge = "";
 
       if (issue.priority === "high") {
-        priorityBadge = `<div class="badge badge-soft badge-error">High</div>`;
+        priorityBadge = `<div class="badge badge-soft badge-error font-bold">High</div>`;
       } else if (issue.priority === "medium") {
-        priorityBadge = `<div class="badge badge-soft badge-warning">Medium</div>`;
+        priorityBadge = `<div class="badge badge-soft badge-warning font-bold">Medium</div>`;
       } else {
-        priorityBadge = `<div class="badge badge-outline badge-info">Info</div>`;
+        priorityBadge = `<div class="badge badge-neutral text-[12px] bg-gray-300 border-none text-black font-bold uppercase">low</div>`;
       }
 
       function getLabelBadge(label) {
@@ -236,7 +236,7 @@ const loadIssues = () => {
         statusImg = "./assets/Open-Status.png";
         borderColor = "#00A96E";
       } else {
-        statusImg = "./assets/Closed-Status.png";
+        statusImg = "./assets/Closed-Status .png";
         borderColor = "#A855F7";
       }
 
@@ -305,18 +305,18 @@ function displayIssues(issues) {
       statusImg = "./assets/Open-Status.png";
       borderColor = "#00A96E";
     } else {
-      statusImg = "./assets/Closed-Status.png";
+      statusImg = "./assets/Closed- Status .png";
       borderColor = "#A855F7";
     }
 
     let priorityBadge = "";
 
     if (issue.priority === "high") {
-      priorityBadge = `<div class="badge badge-soft badge-error">High</div>`;
+      priorityBadge = `<div class="badge badge-soft badge-error font-bold">High</div>`;
     } else if (issue.priority === "medium") {
-      priorityBadge = `<div class="badge badge-soft badge-warning">Medium</div>`;
+      priorityBadge = `<div class="badge badge-soft badge-warning font-bold">Medium</div>`;
     } else {
-      priorityBadge = `<div class="badge badge-outline badge-info">Info</div>`;
+      priorityBadge = `<div class="badge badge-neutral text-[12px] bg-gray-300 border-none text-black font-bold uppercase">low</div>`;
     }
 
     function getLabelBadge(label) {
