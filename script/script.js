@@ -249,7 +249,7 @@ const loadIssues = () => {
         statusImg = "./assets/Open-Status.png";
         borderColor = "#00A96E";
       } else {
-        statusImg = "./assets/Closed-Status .png";
+        statusImg = "./assets/Closed- Status .png";
         borderColor = "#A855F7";
       }
 
@@ -318,7 +318,7 @@ function displayIssues(issues) {
       statusImg = "./assets/Open-Status.png";
       borderColor = "#00A96E";
     } else {
-      statusImg = "./assets/Closed-Status .png";
+      statusImg = "./assets/Closed- Status .png";
       borderColor = "#A855F7";
     }
 
